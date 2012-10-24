@@ -1,0 +1,31 @@
+package unityEngine;
+@:native("UnityEngine.ConfigurableJoint") extern class ConfigurableJoint extends Joint {
+	var secondaryAxis:unityEngine.Vector3;
+	var xMotion:unityEngine.ConfigurableJointMotion;
+	var yMotion:unityEngine.ConfigurableJointMotion;
+	var zMotion:unityEngine.ConfigurableJointMotion;
+	var angularXMotion:unityEngine.ConfigurableJointMotion;
+	var angularYMotion:unityEngine.ConfigurableJointMotion;
+	var angularZMotion:unityEngine.ConfigurableJointMotion;
+	var linearLimit:unityEngine.SoftJointLimit;
+	var lowAngularXLimit:unityEngine.SoftJointLimit;
+	var highAngularXLimit:unityEngine.SoftJointLimit;
+	var angularYLimit:unityEngine.SoftJointLimit;
+	var angularZLimit:unityEngine.SoftJointLimit;
+	var targetPosition:unityEngine.Vector3;
+	var targetVelocity:unityEngine.Vector3;
+	var xDrive:unityEngine.JointDrive;
+	var yDrive:unityEngine.JointDrive;
+	var zDrive:unityEngine.JointDrive;
+	var targetRotation:unityEngine.Quaternion;
+	var targetAngularVelocity:unityEngine.Vector3;
+	var rotationDriveMode:unityEngine.RotationDriveMode;
+	var angularXDrive:unityEngine.JointDrive;
+	var angularYZDrive:unityEngine.JointDrive;
+	var slerpDrive:unityEngine.JointDrive;
+	var projectionMode:unityEngine.JointProjectionMode;
+	var projectionDistance:Float;
+	var projectionAngle:Float;
+	var configuredInWorldSpace:Bool;
+	var swapBodies:Bool;
+}

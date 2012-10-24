@@ -1,6 +1,7 @@
 <project name="unity3d" url="https://github.com/AxGord/hx-unity3d" license="BSD">
     <user name="AxGord"/>
-    <tag v="cross" />
+    <tag v="unity3d" />
+    <tag v="cs" />
     <description>HaXe Unity3d target</description>
-    <version name="0.0.1">Only trace</version>
+    <version name="0.0.2">Some progress</version>
 </project>

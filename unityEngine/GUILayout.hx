@@ -1,0 +1,36 @@
+package unityEngine;
+@:native("UnityEngine.GUILayout") extern class GUILayout {
+	function Label(content:unityEngine.GUIContent, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Void;
+	function Box(content:unityEngine.GUIContent, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Void;
+	function Button(content:unityEngine.GUIContent, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Bool;
+	function RepeatButton(content:unityEngine.GUIContent, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Bool;
+	function TextField(text:String, maxLength:Int, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):String;
+	function PasswordField(password:String, maskChar:unityEngine.char, maxLength:Int, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):String;
+	function TextArea(text:String, maxLength:Int, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):String;
+	function Toggle(value:Bool, content:unityEngine.GUIContent, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Bool;
+	function Toolbar(selected:Int, contents:unityEngine.Array<GUIContent>, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Int;
+	function SelectionGrid(selected:Int, contents:unityEngine.Array<GUIContent>, xCount:Int, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Int;
+	function HorizontalSlider(value:Float, leftValue:Float, rightValue:Float, slider:unityEngine.GUIStyle, thumb:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Float;
+	function VerticalSlider(value:Float, leftValue:Float, rightValue:Float, slider:unityEngine.GUIStyle, thumb:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Float;
+	function HorizontalScrollbar(value:Float, size:Float, leftValue:Float, rightValue:Float, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Float;
+	function VerticalScrollbar(value:Float, size:Float, topValue:Float, bottomValue:Float, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Float;
+	function Space(pixels:Float):Void;
+	function FlexibleSpace():Void;
+	function BeginHorizontal(content:unityEngine.GUIContent, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Void;
+	function EndHorizontal():Void;
+	function BeginVertical(content:unityEngine.GUIContent, style:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):Void;
+	function EndVertical():Void;
+	function BeginArea(screenRect:unityEngine.Rect, content:unityEngine.GUIContent, style:unityEngine.GUIStyle):Void;
+	function EndArea():Void;
+	function BeginScrollView(scrollPosition:unityEngine.Vector2, alwaysShowHorizontal:Bool, alwaysShowVertical:Bool, horizontalScrollbar:unityEngine.GUIStyle, verticalScrollbar:unityEngine.GUIStyle, background:unityEngine.GUIStyle, params options:unityEngine.Array<GUILayoutOption>):unityEngine.Vector2;
+	function EndScrollView():Void;
+	function Window(id:Int, screenRect:unityEngine.Rect, func:unityEngine.GUI.WindowFunction, content:unityEngine.GUIContent, style:unityEngine.GUIStyle, :unityEngine.):unityEngine.Rect;
+	function Width(width:Float):unityEngine.GUILayoutOption;
+	function MinWidth(minWidth:Float):unityEngine.GUILayoutOption;
+	function MaxWidth(maxWidth:Float):unityEngine.GUILayoutOption;
+	function Height(height:Float):unityEngine.GUILayoutOption;
+	function MinHeight(minHeight:Float):unityEngine.GUILayoutOption;
+	function MaxHeight(maxHeight:Float):unityEngine.GUILayoutOption;
+	function ExpandWidth(expand:Bool):unityEngine.GUILayoutOption;
+	function ExpandHeight(expand:Bool):unityEngine.GUILayoutOption;
+}

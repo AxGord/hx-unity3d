@@ -1,0 +1,30 @@
+package unityEngine;
+@:native("UnityEngine.Material") extern class Material extends Object {
+	var shader:unityEngine.Shader;
+	var color:unityEngine.Color;
+	var mainTexture:unityEngine.Texture;
+	var mainTextureOffset:unityEngine.Vector2;
+	var mainTextureScale:unityEngine.Vector2;
+	var passCount:Int;
+	var renderQueue:Int;
+	function new(source:unityEngine.Material):Void;
+	function SetColor(propertyName:String, color:unityEngine.Color):Void;
+	function GetColor(propertyName:String):unityEngine.Color;
+	function SetVector(propertyName:String, vector:unityEngine.Vector4):Void;
+	function GetVector(propertyName:String):unityEngine.Vector4;
+	function SetTexture(propertyName:String, texture:unityEngine.Texture):Void;
+	function GetTexture(propertyName:String):unityEngine.Texture;
+	function SetTextureOffset(propertyName:String, offset:unityEngine.Vector2):Void;
+	function GetTextureOffset(propertyName:String):unityEngine.Vector2;
+	function SetTextureScale(propertyName:String, scale:unityEngine.Vector2):Void;
+	function GetTextureScale(propertyName:String):unityEngine.Vector2;
+	function SetMatrix(propertyName:String, matrix:unityEngine.Matrix4x4):Void;
+	function GetMatrix(propertyName:String):unityEngine.Matrix4x4;
+	function SetFloat(propertyName:String, value:Float):Void;
+	function GetFloat(propertyName:String):Float;
+	function HasProperty(propertyName:String):Bool;
+	function GetTag(tag:String, searchFallbacks:Bool, defaultValue:String = ""):String;
+	function Lerp(start:unityEngine.Material, end:unityEngine.Material, t:Float):Void;
+	function SetPass(pass:Int):Bool;
+	function CopyPropertiesFromMaterial(mat:unityEngine.Material):Void;
+}

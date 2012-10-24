@@ -1,0 +1,36 @@
+package unityEngine;
+@:native("UnityEngine.Input") extern class Input {
+	static var gyro:unityEngine.Gyroscope;
+	static var mousePosition:unityEngine.Vector3;
+	static var anyKey:Bool;
+	static var anyKeyDown:Bool;
+	static var inputString:String;
+	static var acceleration:unityEngine.Vector3;
+	static var accelerationEvents:unityEngine.Array<AccelerationEvent>;
+	static var accelerationEventCount:Int;
+	static var touches:unityEngine.Array<Touch>;
+	static var touchCount:Int;
+	static var multiTouchEnabled:Bool;
+	static var location:unityEngine.LocationService;
+	static var compass:unityEngine.Compass;
+	static var deviceOrientation:unityEngine.DeviceOrientation;
+	static var imeCompositionMode:unityEngine.IMECompositionMode;
+	static var compositionString:String;
+	static var compositionCursorPos:unityEngine.Vector2;
+	static var imeIsSelected:Bool;
+	function GetAxis(axisName:String):Float;
+	function GetAxisRaw(axisName:String):Float;
+	function GetButton(buttonName:String):Bool;
+	function GetButtonDown(buttonName:String):Bool;
+	function GetButtonUp(buttonName:String):Bool;
+	function GetKey(key:unityEngine.KeyCode):Bool;
+	function GetKeyDown(key:unityEngine.KeyCode):Bool;
+	function GetKeyUp(key:unityEngine.KeyCode):Bool;
+	function GetJoystickNames():unityEngine.Array<string>;
+	function GetMouseButton(button:Int):Bool;
+	function GetMouseButtonDown(button:Int):Bool;
+	function GetMouseButtonUp(button:Int):Bool;
+	function ResetInputAxes():Void;
+	function GetAccelerationEvent(index:Int):unityEngine.AccelerationEvent;
+	function GetTouch(index:Int):unityEngine.Touch;
+}

@@ -1,0 +1,30 @@
+package unityEngine;
+@:native("UnityEngine.ProceduralMaterial") extern class ProceduralMaterial extends Material {
+	var cacheSize:unityEngine.ProceduralCacheSize;
+	var animationUpdateRate:Int;
+	var isProcessing:Bool;
+	var isLoadTimeGenerated:Bool;
+	function new():Void;
+	function GetProceduralPropertyDescriptions():unityEngine.Array<ProceduralPropertyDescription>;
+	function HasProceduralProperty(inputName:String):Bool;
+	function GetProceduralBoolean(inputName:String):Bool;
+	function SetProceduralBoolean(inputName:String, value:Bool):Void;
+	function GetProceduralFloat(inputName:String):Float;
+	function SetProceduralFloat(inputName:String, value:Float):Void;
+	function GetProceduralVector(inputName:String):unityEngine.Vector4;
+	function SetProceduralVector(inputName:String, value:unityEngine.Vector4):Void;
+	function GetProceduralColor(inputName:String):unityEngine.Color;
+	function SetProceduralColor(inputName:String, value:unityEngine.Color):Void;
+	function GetProceduralEnum(inputName:String):Int;
+	function SetProceduralEnum(inputName:String, value:Int):Void;
+	function GetProceduralTexture(inputName:String):unityEngine.Texture2D;
+	function SetProceduralTexture(inputName:String, value:unityEngine.Texture2D):Void;
+	function IsProceduralPropertyCached(inputName:String):Bool;
+	function CacheProceduralProperty(inputName:String, value:Bool):Void;
+	function ClearCache():Void;
+	function RebuildTextures():Void;
+	function RebuildTexturesImmediately():Void;
+	static var isSupported:Bool;
+	static var substanceProcessorUsage:unityEngine.ProceduralProcessorUsage;
+	function StopRebuilds():Void;
+}

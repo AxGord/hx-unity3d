@@ -1,0 +1,35 @@
+package unityEngine;
+@:native("UnityEngine.Vector3") extern class Vector3 {
+	var x:Float;
+	var y:Float;
+	var z:Float;
+	var normalized:unityEngine.Vector3;
+	var magnitude:Float;
+	var sqrMagnitude:Float;
+	function new(x:Float, y:Float):Void;
+	function Set(new_x:Float, new_y:Float, new_z:Float):Void;
+	function Scale(a:unityEngine.Vector3, b:unityEngine.Vector3):unityEngine.Vector3;
+	function Normalize():Void;
+	function ToString(format:String):String;
+	static var zero:unityEngine.Vector3;
+	static var one:unityEngine.Vector3;
+	static var forward:unityEngine.Vector3;
+	static var up:unityEngine.Vector3;
+	static var right:unityEngine.Vector3;
+	function Lerp(from:unityEngine.Vector3, to:unityEngine.Vector3, t:Float):unityEngine.Vector3;
+	function Slerp(from:unityEngine.Vector3, to:unityEngine.Vector3, t:Float):unityEngine.Vector3;
+	function OrthoNormalize(normal:unityEngine.Vector3, tangent:unityEngine.Vector3, binormal:unityEngine.Vector3):Void;
+	function MoveTowards(current:unityEngine.Vector3, target:unityEngine.Vector3, maxDistanceDelta:Float):unityEngine.Vector3;
+	function RotateTowards(current:unityEngine.Vector3, target:unityEngine.Vector3, maxRadiansDelta:Float, maxMagnitudeDelta:Float):unityEngine.Vector3;
+	function SmoothDamp(current:unityEngine.Vector3, target:unityEngine.Vector3, currentVelocity:unityEngine.Vector3, smoothTime:Float, maxSpeed:Float = Mathf.Infinity, deltaTime:Float = Time.deltaTime):unityEngine.Vector3;
+	//function Scale(a:unityEngine.Vector3, b:unityEngine.Vector3):unityEngine.Vector3;
+	function Cross(lhs:unityEngine.Vector3, rhs:unityEngine.Vector3):unityEngine.Vector3;
+	function Reflect(inDirection:unityEngine.Vector3, inNormal:unityEngine.Vector3):unityEngine.Vector3;
+	function Dot(lhs:unityEngine.Vector3, rhs:unityEngine.Vector3):Float;
+	function Project(vector:unityEngine.Vector3, onNormal:unityEngine.Vector3):unityEngine.Vector3;
+	function Angle(from:unityEngine.Vector3, to:unityEngine.Vector3):Float;
+	function Distance(a:unityEngine.Vector3, b:unityEngine.Vector3):Float;
+	function ClampMagnitude(vector:unityEngine.Vector3, maxLength:Float):unityEngine.Vector3;
+	function Min(lhs:unityEngine.Vector3, rhs:unityEngine.Vector3):unityEngine.Vector3;
+	function Max(lhs:unityEngine.Vector3, rhs:unityEngine.Vector3):unityEngine.Vector3;
+}

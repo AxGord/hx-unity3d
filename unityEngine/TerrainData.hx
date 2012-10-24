@@ -1,0 +1,37 @@
+package unityEngine;
+@:native("UnityEngine.TerrainData") extern class TerrainData extends Object {
+	var heightmapWidth:Int;
+	var heightmapHeight:Int;
+	var heightmapResolution:Int;
+	var heightmapScale:unityEngine.Vector3;
+	var size:unityEngine.Vector3;
+	var wavingGrassStrength:Float;
+	var wavingGrassAmount:Float;
+	var wavingGrassSpeed:Float;
+	var wavingGrassTint:unityEngine.Color;
+	var detailWidth:Int;
+	var detailHeight:Int;
+	var detailResolution:Int;
+	var detailPrototypes:unityEngine.Array<DetailPrototype>;
+	var treeInstances:unityEngine.Array<TreeInstance>;
+	var treePrototypes:unityEngine.Array<TreePrototype>;
+	var alphamapLayers:Int;
+	var alphamapResolution:Int;
+	var alphamapWidth:Int;
+	var alphamapHeight:Int;
+	var baseMapResolution:Int;
+	var splatPrototypes:unityEngine.Array<SplatPrototype>;
+	function GetHeight(x:Int, y:Int):Float;
+	function GetInterpolatedHeight(x:Float, y:Float):Float;
+	function GetHeights(xBase:Int, yBase:Int, width:Int, height:Int):unityEngine.float[,];
+	function SetHeights(xBase:Int, yBase:Int, heights:unityEngine.float[,]:):Void;
+	function GetSteepness(x:Float, y:Float):Float;
+	function GetInterpolatedNormal(x:Float, y:Float):unityEngine.Vector3;
+	function SetDetailResolution(detailResolution:Int, resolutionPerPatch:Int):Void;
+	function RefreshPrototypes():Void;
+	function GetSupportedLayers(xBase:Int, yBase:Int, totalWidth:Int, totalHeight:Int):unityEngine.Array<int>;
+	function GetDetailLayer(xBase:Int, yBase:Int, width:Int, height:Int, layer:Int):unityEngine.int[,];
+	function SetDetailLayer(xBase:Int, yBase:Int, layer:Int, details:unityEngine.int[,]:):Void;
+	function GetAlphamaps(x:Int, y:Int, width:Int, height:Int):unityEngine.float[,,];
+	function SetAlphamaps(x:Int, y:Int, map:unityEngine.float[):Void;
+}

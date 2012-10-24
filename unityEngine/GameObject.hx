@@ -1,0 +1,37 @@
+package unityEngine;
+@:native("UnityEngine.GameObject") extern class GameObject extends Object {
+	var isStatic:Bool;
+	var transform:unityEngine.Transform;
+	var rigidbody:unityEngine.Rigidbody;
+	var camera:unityEngine.Camera;
+	var light:unityEngine.Light;
+	var animation:unityEngine.Animation;
+	var constantForce:unityEngine.ConstantForce;
+	var renderer:unityEngine.Renderer;
+	var audio:unityEngine.AudioSource;
+	var guiText:unityEngine.GUIText;
+	var networkView:unityEngine.NetworkView;
+	var guiTexture:unityEngine.GUITexture;
+	var collider:unityEngine.Collider;
+	var hingeJoint:unityEngine.HingeJoint;
+	var particleEmitter:unityEngine.ParticleEmitter;
+	var layer:Int;
+	var active:Bool;
+	var tag:String;
+	function new(name:String, components:unityEngine.Array<Type>):Void;
+	function GetComponent(type:String):unityEngine.Component;
+	function GetComponentInChildren():Dynamic;
+	function GetComponents():unityEngine.Array<Dynamic>;
+	function GetComponentsInChildren():unityEngine.Array<Dynamic>;
+	function SetActiveRecursively(state:Bool):Void;
+	function CompareTag(tag:String):Bool;
+	function SendMessageUpwards(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
+	function SendMessage(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
+	function BroadcastMessage(methodName:String, parameter:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
+	function AddComponent():Dynamic;
+	function SampleAnimation(animation:unityEngine.AnimationClip, time:Float):Void;
+	function CreatePrimitive(type:unityEngine.PrimitiveType):unityEngine.GameObject;
+	function FindWithTag(tag:String):unityEngine.GameObject;
+	function FindGameObjectsWithTag(tag:String):unityEngine.Array<GameObject>;
+	function Find(name:String):unityEngine.GameObject;
+}

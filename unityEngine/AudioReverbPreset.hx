@@ -1,0 +1,31 @@
+package unityEngine;
+@:native("UnityEngine.AudioReverbPreset") extern class AudioReverbPreset {
+	static var Off;
+	static var Generic;
+	static var PaddedCell;
+	static var Room;
+	static var Bathroom;
+	static var Livingroom;
+	static var Stoneroom;
+	static var Auditorium;
+	static var Concerthall;
+	static var Cave;
+	static var Arena;
+	static var Hangar;
+	static var CarpetedHallway;
+	static var Hallway;
+	static var StoneCorridor;
+	static var Alley;
+	static var Forest;
+	static var City;
+	static var Mountains;
+	static var Quarry;
+	static var Plain;
+	static var ParkingLot;
+	static var SewerPipe;
+	static var Underwater;
+	static var Drugged;
+	static var Dizzy;
+	static var Psychotic;
+	static var User;
+}
