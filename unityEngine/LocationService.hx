@@ -3,6 +3,6 @@ package unityEngine;
 	var isEnabledByUser:Bool;
 	var status:unityEngine.LocationServiceStatus;
 	var lastData:unityEngine.LocationInfo;
-	function Start(desiredAccuracyInMeters:unityEngine.float = 10f, updateDistanceInMeters:unityEngine.float = 10f):Void;
+	function Start(desiredAccuracyInMeters:Float = 10, updateDistanceInMeters:Float = 10):Void;
 	function Stop():Void;
 }

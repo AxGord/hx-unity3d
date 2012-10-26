@@ -1,5 +1,5 @@
 package unityEngine;
-@:native("UnityEngine.Component") extern class Component extends Object, implements Dynamic {
+@:native("UnityEngine.Component") extern class Component extends Object {
 	//var transform(default,null):unityEngine.Transform;
 	//var rigidbody(default,null):unityEngine.Rigidbody;
 	//var camera(default,null):unityEngine.Camera;
@@ -18,11 +18,18 @@ package unityEngine;
 	//var gameObject(default,null):unityEngine.GameObject;
 	var tag:String;
 	function GetComponent(type:String):unityEngine.Component;
-	function GetComponentInChildren():Dynamic;
+	function GetComponentInChildren(d:Dynamic):Dynamic;
 	function GetComponentsInChildren():unityEngine.Array<Dynamic>;
 	function GetComponents():unityEngine.Array<Dynamic>;
 	function CompareTag(tag:String):Bool;
 	function SendMessageUpwards(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
 	function SendMessage(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
 	function BroadcastMessage(methodName:String, parameter:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
+
+	public inline function getTransform():unityEngine.Transform return untyped transform
+	public inline function getRenderer():unityEngine.Renderer return untyped renderer
+	public inline function getGameObject():unityEngine.GameObject return untyped gameObject
+	
+	
+	public inline function chRenderer():unityEngine.Renderer return GetComponentInChildren(Renderer)
 }

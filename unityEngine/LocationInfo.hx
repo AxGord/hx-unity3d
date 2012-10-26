@@ -5,5 +5,5 @@ package unityEngine;
 	var altitude:Float;
 	var horizontalAccuracy:Float;
 	var verticalAccuracy:Float;
-	var timestamp:unityEngine.double;
+	var timestamp:Float;
 }

@@ -16,7 +16,8 @@ package unityEngine;
 	var root:unityEngine.Transform;
 	var childCount:Int;
 	var lossyScale:unityEngine.Vector3;
-	function Translate(x:Float, y:Float, z:Float, relativeTo:unityEngine.Transform):Void;
+	function Translate(x:Float, y:Float, z:Float, relativeTo:unityEngine.Space = Space.Self):Void;
+	@:overload(function(x:Int,y:Int,z:Int):Void{})
 	function Rotate(axis:unityEngine.Vector3, angle:Float, relativeTo:unityEngine.Space = Space.Self):Void;
 	function RotateAround(point:unityEngine.Vector3, axis:unityEngine.Vector3, angle:Float):Void;
 	function LookAt(worldPosition:unityEngine.Vector3, worldUp:unityEngine.Vector3 = Vector3.up):Void;

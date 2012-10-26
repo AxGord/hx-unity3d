@@ -3,6 +3,6 @@ package unityEngine;
 	var magneticHeading:Float;
 	var trueHeading:Float;
 	var rawVector:unityEngine.Vector3;
-	var timestamp:unityEngine.double;
+	var timestamp:Float;
 	var enabled:Bool;
 }

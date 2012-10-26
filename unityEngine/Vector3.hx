@@ -1,13 +1,14 @@
 package unityEngine;
 @:native("UnityEngine.Vector3") extern class Vector3 {
-	var x:Float;
-	var y:Float;
-	var z:Float;
+	var x:Single;
+	var y:Single;
+	var z:Single;
 	var normalized:unityEngine.Vector3;
 	var magnitude:Float;
 	var sqrMagnitude:Float;
-	function new(x:Float, y:Float):Void;
-	function Set(new_x:Float, new_y:Float, new_z:Float):Void;
+	@:overload(function(x:Single, y:Single, z:Single):Void{})
+	function new(x:Single, y:Single):Void;
+	function Set(new_x:Single, new_y:Single, new_z:Single):Void;
 	function Scale(a:unityEngine.Vector3, b:unityEngine.Vector3):unityEngine.Vector3;
 	function Normalize():Void;
 	function ToString(format:String):String;
