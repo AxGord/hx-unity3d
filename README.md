@@ -34,3 +34,6 @@ class MyClass extends MonoBehaviour {
 	}
 }
 </pre>
+
+<p2>Manual</p2>
+<a href="http://docs.unity3d.com/Documentation/ScriptReference/20_class_hierarchy.html">Unity Runtime Classes</a>
