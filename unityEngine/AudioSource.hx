@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.AudioSource") extern class AudioSource extends Behaviour {
 	var volume:Float;
 	var pitch:Float;
@@ -18,7 +19,7 @@ package unityEngine;
 	var pan:Float;
 	var rolloffMode:unityEngine.AudioRolloffMode;
 	function PlayOneShot(clip:unityEngine.AudioClip, volumeScale:Float = 1.0):Void;
-	function GetOutputData(samples:unityEngine.Array<Float>, channel:Int):Void;
-	function GetSpectrumData(samples:unityEngine.Array<Float>, channel:Int, window:unityEngine.FFTWindow):Void;
+	function GetOutputData(samples:NativeArray<Float>, channel:Int):Void;
+	function GetSpectrumData(samples:NativeArray<Float>, channel:Int, window:unityEngine.FFTWindow):Void;
 	function PlayClipAtPoint(clip:unityEngine.AudioClip, position:unityEngine.Vector3, volume:Float = 1.0):Void;
 }

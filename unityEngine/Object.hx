@@ -4,8 +4,9 @@ package unityEngine;
 	var hideFlags:unityEngine.HideFlags;
 	function GetInstanceID():Int;
 	function ToString():String;
-	//function Instantiate(original:unityEngine.T):unityEngine.T;
-	function Destroy(obj:unityEngine.Object, t:Float = 0.0):Void;
+	static function Instantiate(original:Dynamic, ?position:Vector3, ?rotation:Quaternion):Dynamic;
+	@:overload(function(obj:unityEngine.Object):Void{})
+	function Destroy(obj:unityEngine.Object, t:Single):Void;
 	function DestroyImmediate(obj:unityEngine.Object, allowDestroyingAssets:Bool = false):Void;
 	//function FindObjectsOfType(type:unityEngine.Type):unityEngine.Array<Object>;
 	//function FindObjectOfType(type:unityEngine.Type):unityEngine.Object;

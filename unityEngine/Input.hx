@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.Input") extern class Input {
 	static var gyro:unityEngine.Gyroscope;
 	static var mousePosition:unityEngine.Vector3;
@@ -6,9 +7,9 @@ package unityEngine;
 	static var anyKeyDown:Bool;
 	static var inputString:String;
 	static var acceleration:unityEngine.Vector3;
-	static var accelerationEvents:unityEngine.Array<AccelerationEvent>;
+	static var accelerationEvents:NativeArray<AccelerationEvent>;
 	static var accelerationEventCount:Int;
-	static var touches:unityEngine.Array<Touch>;
+	static var touches:NativeArray<Touch>;
 	static var touchCount:Int;
 	static var multiTouchEnabled:Bool;
 	static var location:unityEngine.LocationService;
@@ -23,10 +24,13 @@ package unityEngine;
 	static function GetButton(buttonName:String):Bool;
 	static function GetButtonDown(buttonName:String):Bool;
 	static function GetButtonUp(buttonName:String):Bool;
+	@:overload(function(key:String):Bool{})
 	static function GetKey(key:Int):Bool;
+	@:overload(function(key:String):Bool{})
 	static function GetKeyDown(key:Int):Bool;
+	@:overload(function(key:String):Bool{})
 	static function GetKeyUp(key:Int):Bool;
-	static function GetJoystickNames():unityEngine.Array<String>;
+	static function GetJoystickNames():NativeArray<String>;
 	static function GetMouseButton(button:Int):Bool;
 	static function GetMouseButtonDown(button:Int):Bool;
 	static function GetMouseButtonUp(button:Int):Bool;

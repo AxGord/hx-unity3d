@@ -1,11 +1,12 @@
 package unityEngine;
 @:native("UnityEngine.Color") extern class Color {
-	var r:Float;
-	var g:Float;
-	var b:Float;
-	var a:Float;
-	var grayscale:Float;
-	function new(r:Float, g:Float, b:Float):Void;
+	var r:Single;
+	var g:Single;
+	var b:Single;
+	var a:Single;
+	var grayscale:Single;
+	@:overload(function(r:Single, g:Single, b:Single, a:Single):Void{})
+	function new(r:Single, g:Single, b:Single):Void;
 	function ToString(format:String):String;
 	static var red:unityEngine.Color;
 	static var green:unityEngine.Color;
@@ -18,5 +19,5 @@ package unityEngine;
 	static var gray:unityEngine.Color;
 	static var grey:unityEngine.Color;
 	static var clear:unityEngine.Color;
-	function Lerp(a:unityEngine.Color, b:unityEngine.Color, t:Float):unityEngine.Color;
+	static function Lerp(a:unityEngine.Color, b:unityEngine.Color, t:Single):unityEngine.Color;
 }

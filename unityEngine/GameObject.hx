@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.GameObject") extern class GameObject extends Object {
 	var isStatic:Bool;
 	var transform:unityEngine.Transform;
@@ -18,11 +19,14 @@ package unityEngine;
 	var layer:Int;
 	var active:Bool;
 	var tag:String;
-	function new(name:String, components:unityEngine.Array<Type>):Void;
-	function GetComponent(type:String):unityEngine.Component;
-	function GetComponentInChildren(d:Dynamic):Dynamic;
-	function GetComponents():unityEngine.Array<Dynamic>;
-	function GetComponentsInChildren():unityEngine.Array<Dynamic>;
+	function new(name:String, components:NativeArray<Type>):Void;
+	@:overload(function(type:String):unityEngine.Component { } )
+	function GetComponent<T>(cl:Class<T>):T;
+	@:overload(function(type:String):unityEngine.Component { } )
+	function GetComponentInChildren<T>(d:Class<T>):T;
+	function GetComponents():NativeArray<unityEngine.Component>;
+	@:overload(function(type:String):NativeArray<unityEngine.Component> { } )
+	function GetComponentsInChildren<T>(cl:Class<T>):NativeArray<T>;
 	function SetActiveRecursively(state:Bool):Void;
 	function CompareTag(tag:String):Bool;
 	function SendMessageUpwards(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
@@ -32,6 +36,6 @@ package unityEngine;
 	function SampleAnimation(animation:unityEngine.AnimationClip, time:Float):Void;
 	static function CreatePrimitive(type:unityEngine.PrimitiveType):unityEngine.GameObject;
 	static function FindWithTag(tag:String):unityEngine.GameObject;
-	static function FindGameObjectsWithTag(tag:String):unityEngine.Array<GameObject>;
+	static function FindGameObjectsWithTag(tag:String):cs.NativeArray<GameObject>;
 	static function Find(name:String):unityEngine.GameObject;
 }

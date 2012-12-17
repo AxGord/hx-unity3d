@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.Application") extern class Application {
 	static var loadedLevel:Int;
 	static var loadedLevelName:String;
@@ -24,20 +25,21 @@ package unityEngine;
 	static var internetReachability:unityEngine.NetworkReachability;
 	static var genuine:Bool;
 	static var genuineCheckAvailable:Bool;
-	function Quit():Void;
-	function CancelQuit():Void;
-	function LoadLevel(name:String):Void;
-	function LoadLevelAsync(levelName:String):unityEngine.AsyncOperation;
-	function LoadLevelAdditiveAsync(levelName:String):unityEngine.AsyncOperation;
-	function LoadLevelAdditive(name:String):Void;
-	function GetStreamProgressForLevel(levelName:String):Float;
-	function CanStreamedLevelBeLoaded(levelName:String):Bool;
-	function CaptureScreenshot(filename:String, superSize:unityEngine.int = 0):Void;
-	function ExternalCall(functionName:String, params args:unityEngine.Array<object>):Void;
-	function ExternalEval(script:String):Void;
-	function OpenURL(url:String):Void;
-	function RegisterLogCallback(handler:unityEngine.Application.LogCallback):Void;
-	function RegisterLogCallbackThreaded(handler:unityEngine.Application.LogCallback):Void;
-	function RequestUserAuthorization(mode:unityEngine.UserAuthorization):unityEngine.AsyncOperation;
-	function HasUserAuthorization(mode:unityEngine.UserAuthorization):Bool;
+	static function Quit():Void;
+	static function CancelQuit():Void;
+	static function LoadLevel(name:String):Void;
+	static function LoadLevelAsync(levelName:String):unityEngine.AsyncOperation;
+	static function LoadLevelAdditiveAsync(levelName:String):unityEngine.AsyncOperation;
+	static function LoadLevelAdditive(name:String):Void;
+	static function GetStreamProgressForLevel(levelName:String):Float;
+	static function CanStreamedLevelBeLoaded(levelName:String):Bool;
+	@:overload(function(filename:String, superSize:Int):Void{})
+	static function CaptureScreenshot(filename:String):Void;
+	static function ExternalCall(functionName:String, args:NativeArray<Dynamic>):Void;
+	static function ExternalEval(script:String):Void;
+	static function OpenURL(url:String):Void;
+	//static function RegisterLogCallback(handler:unityEngine.Application.LogCallback):Void;
+	//static function RegisterLogCallbackThreaded(handler:unityEngine.Application.LogCallback):Void;
+	static function RequestUserAuthorization(mode:unityEngine.UserAuthorization):unityEngine.AsyncOperation;
+	static function HasUserAuthorization(mode:unityEngine.UserAuthorization):Bool;
 }

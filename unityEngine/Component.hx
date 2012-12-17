@@ -1,6 +1,30 @@
 package unityEngine;
+import cs.NativeArray;
+/*
+class Component extends _Component {
+	public var transform(getTransform, null):Transform;
+	private function getTransform():Transform return untyped transform
+	public var renderer(getRenderer, null):Renderer;
+	private function getRenderer():Renderer return untyped renderer
+	public var rigidbody(getRigidbody, null):Rigidbody;
+	private function getRigidbody():Rigidbody return untyped rigidbody
+	public var camera(getCamera, null):Camera;
+	private function getCamera():Camera return untyped camera
+	public var light(getLight, null):Light;
+	private function getLight():Light return untyped light
+	public var animation(getAnimation, null):Animation;
+	private function getAnimation():Animation return untyped animation
+	public var constantForce(getConstantForce, null):ConstantForce;
+	private function getConstantForce():ConstantForce return untyped constantForce
+	public var gameObject(getGameObject, null):GameObject;
+	private function getGameObject():GameObject return untyped gameObject
+	public var guiTexture(getGuiTexture, null):GUITexture;
+	private function getGuiTexture():GUITexture return untyped guiTexture
+	
+}*/
 @:native("UnityEngine.Component") extern class Component extends Object {
-	//var transform(default,null):unityEngine.Transform;
+	//var transform:Transform;
+	//var _transform(getTransform,null):unityEngine.Transform;
 	//var rigidbody(default,null):unityEngine.Rigidbody;
 	//var camera(default,null):unityEngine.Camera;
 	//var light(default,null):unityEngine.Light;
@@ -19,17 +43,10 @@ package unityEngine;
 	var tag:String;
 	function GetComponent(type:String):unityEngine.Component;
 	function GetComponentInChildren(d:Dynamic):Dynamic;
-	function GetComponentsInChildren():unityEngine.Array<Dynamic>;
-	function GetComponents():unityEngine.Array<Dynamic>;
+	function GetComponentsInChildren(d:Dynamic):NativeArray<Dynamic>;
+	function GetComponents():NativeArray<Dynamic>;
 	function CompareTag(tag:String):Bool;
 	function SendMessageUpwards(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
 	function SendMessage(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
 	function BroadcastMessage(methodName:String, parameter:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
-
-	public inline function getTransform():unityEngine.Transform return untyped transform
-	public inline function getRenderer():unityEngine.Renderer return untyped renderer
-	public inline function getGameObject():unityEngine.GameObject return untyped gameObject
-	
-	
-	public inline function chRenderer():unityEngine.Renderer return GetComponentInChildren(Renderer)
 }

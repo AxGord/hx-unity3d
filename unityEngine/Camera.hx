@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.Camera") extern class Camera extends Behaviour {
 	var fieldOfView:Float;
 	var nearClipPlane:Float;
@@ -21,7 +22,7 @@ package unityEngine;
 	var velocity:unityEngine.Vector3;
 	var clearFlags:unityEngine.CameraClearFlags;
 	var useOcclusionCulling:Bool;
-	var layerCullDistances:unityEngine.Array<Float>;
+	var layerCullDistances:NativeArray<Float>;
 	var layerCullSpherical:Bool;
 	var depthTextureMode:unityEngine.DepthTextureMode;
 	function ResetWorldToCameraMatrix():Void;
@@ -43,5 +44,5 @@ package unityEngine;
 	function CopyFrom(other:unityEngine.Camera):Void;
 	static var main:unityEngine.Camera;
 	static var current:unityEngine.Camera;
-	static var allCameras:unityEngine.Array<Camera>;
+	static var allCameras:NativeArray<Camera>;
 }

@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.Renderer") extern class Renderer extends Component {
 	var isPartOfStaticBatch:Bool;
 	var worldToLocalMatrix:unityEngine.Matrix4x4;
@@ -8,8 +9,8 @@ package unityEngine;
 	var receiveShadows:Bool;
 	var material:unityEngine.Material;
 	var sharedMaterial:unityEngine.Material;
-	var sharedMaterials:unityEngine.Array<Material>;
-	var materials:unityEngine.Array<Material>;
+	var sharedMaterials:NativeArray<Material>;
+	var materials:NativeArray<Material>;
 	var bounds:unityEngine.Bounds;
 	var lightmapIndex:Int;
 	var lightmapTilingOffset:unityEngine.Vector4;

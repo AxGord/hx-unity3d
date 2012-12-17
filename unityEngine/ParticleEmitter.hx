@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.ParticleEmitter") extern class ParticleEmitter extends Component {
 	var emit:Bool;
 	var minSize:Float;
@@ -15,7 +16,7 @@ package unityEngine;
 	var rndRotation:Bool;
 	var angularVelocity:Float;
 	var rndAngularVelocity:Float;
-	var particles:unityEngine.Array<Particle>;
+	var particles:NativeArray<Particle>;
 	var particleCount:Int;
 	var enabled:Bool;
 	function ClearParticles():Void;

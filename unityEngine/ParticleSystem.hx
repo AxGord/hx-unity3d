@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.ParticleSystem") extern class ParticleSystem extends Component {
 	var startDelay:Float;
 	var isPlaying:Bool;
@@ -16,11 +17,13 @@ package unityEngine;
 	var startRotation:Float;
 	var startLifetime:Float;
 	var gravityModifier:Float;
-	function SetParticles(particles:unityEngine.Array<ParticleSystem_Particle>, size:Int):Void;
-	function GetParticles(particles:unityEngine.Array<ParticleSystem_Particle>):Int;
+	function SetParticles(particles:NativeArray<ParticleSystem_Particle>, size:Int):Void;
+	function GetParticles(particles:NativeArray<ParticleSystem_Particle>):Int;
 	function Simulate(t:Float, withChildren:Bool = true):Void;
-	function Play(withChildren:Bool = true):Void;
-	function Stop(withChildren:Bool = true):Void;
+	@:overload(function():Void{})
+	function Play(withChildren:Bool):Void;
+	@:overload(function():Void{})
+	function Stop(withChildren:Bool):Void;
 	function Pause(withChildren:Bool = true):Void;
 	function Clear(withChildren:Bool = true):Void;
 	function IsAlive(withChildren:Bool = true):Bool;

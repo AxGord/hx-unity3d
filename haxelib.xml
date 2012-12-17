@@ -3,5 +3,5 @@
     <tag v="unity3d" />
     <tag v="cs" />
     <description>HaXe Unity3d target</description>
-    <version name="0.0.2">Some progress</version>
+    <version name="0.0.3">using UnityHelper;</version>
 </project>

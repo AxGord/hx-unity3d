@@ -1,6 +1,7 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.QualitySettings") extern class QualitySettings extends Object {
-	static var names:unityEngine.Array<string>;
+	static var names:NativeArray<String>;
 	static var pixelLightCount:Int;
 	static var shadowProjection:unityEngine.ShadowProjection;
 	static var shadowCascades:Int;
@@ -16,8 +17,9 @@ package unityEngine;
 	static var desiredColorSpace:unityEngine.ColorSpace;
 	static var activeColorSpace:unityEngine.ColorSpace;
 	static var blendWeights:unityEngine.BlendWeights;
-	function GetQualityLevel():Int;
-	function SetQualityLevel(index:Int, applyExpensiveChanges:unityEngine.boolean = true):Void;
-	function IncreaseLevel(applyExpensiveChanges:unityEngine.boolean = false):Void;
-	function DecreaseLevel(applyExpensiveChanges:unityEngine.boolean = false):Void;
+	static function GetQualityLevel():Int;
+	@:overload(function(index:Int, applyExpensiveChanges:Bool):Void{})
+	static function SetQualityLevel(index:Int):Void;
+	static function IncreaseLevel(applyExpensiveChanges:Bool = false):Void;
+	static function DecreaseLevel(applyExpensiveChanges:Bool = false):Void;
 }

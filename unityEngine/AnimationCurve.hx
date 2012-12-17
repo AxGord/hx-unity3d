@@ -1,6 +1,7 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.AnimationCurve") extern class AnimationCurve {
-	var keys:unityEngine.Array<Keyframe>;
+	var keys:NativeArray<Keyframe>;
 	var length:Int;
 	var preWrapMode:unityEngine.WrapMode;
 	var postWrapMode:unityEngine.WrapMode;

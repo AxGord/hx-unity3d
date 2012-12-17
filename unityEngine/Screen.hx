@@ -1,6 +1,6 @@
 package unityEngine;
 @:native("UnityEngine.Screen") extern class Screen {
-	static var resolutions:unityEngine.Array<Resolution>;
+	static var resolutions:cs.NativeArray<Resolution>;
 	static var currentResolution:unityEngine.Resolution;
 	static var showCursor:Bool;
 	static var lockCursor:Bool;
@@ -14,5 +14,6 @@ package unityEngine;
 	static var autorotateToLandscapeRight:Bool;
 	static var orientation:unityEngine.ScreenOrientation;
 	static var sleepTimeout:Int;
-	function SetResolution(width:Int, height:Int, fullscreen:Bool, preferredRefreshRate:unityEngine.int = 0):Void;
+	@:overload(function(width:Int, height:Int, fullscreen:Bool, preferredRefreshRate:Int):Void{})
+	static function SetResolution(width:Int, height:Int, fullscreen:Bool):Void;
 }

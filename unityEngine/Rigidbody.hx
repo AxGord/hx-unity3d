@@ -1,4 +1,5 @@
 package unityEngine;
+import cs.NativeArray;
 @:native("UnityEngine.Rigidbody") extern class Rigidbody extends Component {
 	var velocity:unityEngine.Vector3;
 	var angularVelocity:unityEngine.Vector3;
@@ -39,5 +40,5 @@ package unityEngine;
 	function IsSleeping():Bool;
 	function WakeUp():Void;
 	function SweepTest(direction:unityEngine.Vector3, hitInfo:unityEngine.RaycastHit, distance:Float = Mathf.Infinity):Bool;
-	function SweepTestAll(direction:unityEngine.Vector3, distance:Float = Mathf.Infinity):unityEngine.Array<RaycastHit>;
+	function SweepTestAll(direction:unityEngine.Vector3, distance:Float = Mathf.Infinity):NativeArray<RaycastHit>;
 }
