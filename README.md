@@ -19,14 +19,16 @@ And then, use the .cs files in the unity3d editor
 import unityEngine.MonoBehaviour;
 import unityEngine.Time;
 import unityEngine.Vector3;
+import unityEngine.GameObject;
 using UnityHelper;
 class MyClass extends MonoBehaviour {
 	private var target:GameObject;
 	private var speed:Single;
 	private function Start():Void {
 		speed = 5;
+		if (target == null) target = GameObject.Find('/Target');
 	}
-	public function Update():Void {
+	private function Update():Void {
 		if (speed == 0) return;
 		getTransform().position = Vector3.MoveTowards(getTransform().position, target.position, Time.deltaTime * speed);
 	}
