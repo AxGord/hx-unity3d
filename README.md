@@ -30,7 +30,7 @@ class MyClass extends MonoBehaviour {
 	}
 	private function Update():Void {
 		if (speed == 0) return;
-		getTransform().position = Vector3.MoveTowards(getTransform().position, target.position, Time.deltaTime * speed);
+		getTransform().position = Vector3.MoveTowards(getTransform().position, target.transform.position, Time.deltaTime * speed);
 	}
 }
 </pre>
