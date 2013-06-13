@@ -1,6 +1,6 @@
 <h1>hx-unity3d</h1>
 HaXe Unity3d target
-<p><small>v0.0.3</small></p>
+<p><small>v0.0.4</small></p>
 
 <h2>Installation</h2>
 <pre>haxelib install unity3d</pre>
