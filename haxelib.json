@@ -1,0 +1,13 @@
+{
+  "name": "unity3d",
+  "url" : "https://github.com/AxGord/hx-unity3d",
+  "license": "BSD",
+  "tags": ["unity3d", "cs"],
+  "description": "HaXe Unity3d target",
+  "version": "0.0.3",
+  "releasenote": "using UnityHelper;",
+  "contributors": ["AxGord"],
+  "dependencies": {
+    "hxcs": ""
+  }
+}
