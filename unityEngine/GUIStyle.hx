@@ -27,7 +27,7 @@ package unityEngine;
 	var stretchHeight:Bool;
 	var lineHeight:Float;
 	function new(other:unityEngine.GUIStyle):Void;
-	function Draw(position:unityEngine.Rect, content:unityEngine.GUIContent, controlID:Int, on:unityEngine.boolean = false):Void;
+	//function Draw(position:unityEngine.Rect, content:unityEngine.GUIContent, controlID:Int, on:unityEngine.boolean = false):Void;
 	function DrawCursor(position:unityEngine.Rect, content:unityEngine.GUIContent, controlID:Int, Character:Int):Void;
 	function DrawWithTextSelection(position:unityEngine.Rect, content:unityEngine.GUIContent, controlID:Int, firstSelectedCharacter:Int, lastSelectedCharacter:Int):Void;
 	function GetCursorPixelPosition(position:unityEngine.Rect, content:unityEngine.GUIContent, cursorStringIndex:Int):unityEngine.Vector2;
@@ -35,5 +35,5 @@ package unityEngine;
 	function CalcSize(content:unityEngine.GUIContent):unityEngine.Vector2;
 	function CalcScreenSize(contentSize:unityEngine.Vector2):unityEngine.Vector2;
 	function CalcHeight(content:unityEngine.GUIContent, width:Float):Float;
-	function CalcMinMaxWidth(content:unityEngine.GUIContent, out minWidth:Float, out maxWidth:Float):Void;
+	//function CalcMinMaxWidth(content:unityEngine.GUIContent, out minWidth:Float, out maxWidth:Float):Void;
 }

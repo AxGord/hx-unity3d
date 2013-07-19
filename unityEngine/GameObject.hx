@@ -19,6 +19,7 @@ import cs.NativeArray;
 	var layer:Int;
 	var active:Bool;
 	var tag:String;
+	@:overload(function(name:String):Void{})
 	function new(name:String, components:NativeArray<Type>):Void;
 	@:overload(function(type:String):unityEngine.Component { } )
 	function GetComponent<T>(cl:Class<T>):T;
@@ -32,7 +33,7 @@ import cs.NativeArray;
 	function SendMessageUpwards(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
 	function SendMessage(methodName:String, value:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
 	function BroadcastMessage(methodName:String, parameter:unityEngine.Object = null, options:unityEngine.SendMessageOptions = SendMessageOptions.RequireReceiver):Void;
-	function AddComponent():Dynamic;
+	function AddComponent(className : String):Dynamic;
 	function SampleAnimation(animation:unityEngine.AnimationClip, time:Float):Void;
 	static function CreatePrimitive(type:unityEngine.PrimitiveType):unityEngine.GameObject;
 	static function FindWithTag(tag:String):unityEngine.GameObject;

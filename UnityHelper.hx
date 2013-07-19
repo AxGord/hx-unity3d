@@ -19,6 +19,7 @@ class UnityHelper {
 	public static inline function getConstantForce(c:Component):unityEngine.ConstantForce return untyped c.constantForce;
 	public static inline function getGameObject(c:Component):unityEngine.GameObject return untyped c.gameObject;
 	public static inline function getGuiTexture(c:Component):unityEngine.GUITexture return untyped c.guiTexture;
+	public static inline function getGuiText(c:Component):unityEngine.GUIText return untyped c.guiText;
 	
 	public static inline function chRenderer(c:Component):Renderer return c.GetComponentInChildren(Renderer);
 	
@@ -37,6 +38,9 @@ class UnityHelperGO {
 	public static inline function getConstantForce(c:GameObject):unityEngine.ConstantForce return c.constantForce;
 	public static inline function getGameObject(c:GameObject):unityEngine.GameObject return c;
 	public static inline function getGuiTexture(c:GameObject):unityEngine.GUITexture return c.guiTexture;
+	public static inline function getGuiText(c:GameObject):unityEngine.GUIText return untyped c.guiText;
 	
-	
+	public static inline function getComp<T>(g:GameObject, cl:Class<T>):T {
+		return cast g.GetComponent(Type.getClassName(cl).split('.').pop());
+	}
 }

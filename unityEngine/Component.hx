@@ -23,7 +23,8 @@ class Component extends _Component {
 	
 }*/
 @:native("UnityEngine.Component") extern class Component extends Object {
-	//var transform:Transform;
+	function new():Void;
+	//var transform(default,null):Transform;
 	//var _transform(getTransform,null):unityEngine.Transform;
 	//var rigidbody(default,null):unityEngine.Rigidbody;
 	//var camera(default,null):unityEngine.Camera;

@@ -21,7 +21,7 @@ package unityEngine;
 	var verticalScrollbarUpButton:unityEngine.GUIStyle;
 	var verticalScrollbarDownButton:unityEngine.GUIStyle;
 	var scrollView:unityEngine.GUIStyle;
-	var customStyles:unityEngine.Array<GUIStyle>;
+	//var customStyles:unityEngine.Array<GUIStyle>;
 	var settings:unityEngine.GUISettings;
 	function GetStyle(styleName:String):unityEngine.GUIStyle;
 	function FindStyle(styleName:String):unityEngine.GUIStyle;

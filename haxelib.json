@@ -4,8 +4,8 @@
   "license": "BSD",
   "tags": ["unity3d", "cs"],
   "description": "HaXe Unity3d target",
-  "version": "0.0.4",
-  "releasenote": "haxe3 support",
+  "version": "0.0.5",
+  "releasenote": "some fixes",
   "contributors": ["AxGord"],
   "dependencies": {
     "hxcs": ""
