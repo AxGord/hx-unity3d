@@ -1,3 +1,4 @@
+Project closed - use HUGS
 <h1>hx-unity3d</h1>
 HaXe Unity3d target
 <p><small>v0.0.5</small></p>
